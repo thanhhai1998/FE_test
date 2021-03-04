@@ -1,0 +1,63 @@
+.community{
+    .carousel-update{
+        .img-live-update{
+            width: 96px;
+            height: 96px;
+            background-position: center;
+        }
+        .carousel-cell.is-selected{
+            .img-live-update{box-shadow: 0 0 0 5px $primary;
+            border: 5px solid #fff
+            }
+        }
+        .flickity-viewport{
+            width: 85%;
+            margin: auto;
+        }
+        .flickity-button{
+            background: transparent; 
+            svg path{fill: $primary;}
+            &:focus{
+                box-shadow: none;
+            }
+        }
+        .flickity-prev-next-button{
+            &.next{
+                right: -10px;
+            }
+            &.previous{
+                left: -10px ;
+            }
+        }
+    }
+    .carousel-all-post{
+        .carousel-cell{
+            max-width: 270px; 
+            max-height: 40vh;
+            .facebook{
+                left: 0;
+            }
+        }
+    }
+    .icon-social{
+        height: 40px;
+        width: 40px;
+        line-height: 35px; 
+        &.facebook svg{
+            bottom: 0; 
+            right: 7px;
+        }
+    }
+    .form-search{
+        .form-group svg{ 
+    top: 50%;
+    right: 0;
+    transform: translate(-50%,-50%);
+        }
+    }
+}
+@media screen and (min-width:576px){
+    .community{
+        height: calc(100vh - 71px); 
+    }
+}

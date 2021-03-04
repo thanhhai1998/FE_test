@@ -1,0 +1,32 @@
+.contact{ background: rgba($color: #D8EDFF, $alpha: 0.2);
+    .btn:hover{
+        color: #fff !important;
+        background: $primary !important;
+    }
+.label-checkbox::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 17px;
+    height: 17px;
+    border: 1px solid $primary;
+    background: #fff; 
+}
+input[type="checkbox"]:checked+label::after{
+    content: "✔";
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    font-size: 10px; 
+    -webkit-transition: .2s;
+    transition: all .2s;
+}
+}
+@media screen and (min-width:576px){
+    .contact{ 
+        .contact-content{
+            height: calc(100vh - 71px);
+        }
+    }
+}

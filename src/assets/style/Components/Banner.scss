@@ -1,0 +1,30 @@
+.banner{
+    height: calc(100vh - 71px); 
+    .bn{
+        flex: 1 1 auto;
+        .bg-banner svg{
+            max-width: 50vw;
+        }
+    }
+    .store{
+        flex:0 1 auto
+    }
+    ul {
+        top: -150px;
+        right: 1rem;
+        li{ 
+            height: 32px;
+            width: 32px;
+            line-height: 28px;
+            cursor: pointer; 
+        }
+    }
+}
+@media screen and (min-width:576px){
+    .banner{
+        ul{
+        right: 3rem;
+        }
+    }
+
+}

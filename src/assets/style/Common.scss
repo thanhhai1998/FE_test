@@ -1,0 +1,43 @@
+
+
+a{
+    text-decoration: none !important;
+}
+a,label, .pointer{
+    cursor: pointer;
+}
+.display-5{
+    font-size: $display5-size;
+}
+.display-6{
+    font-size: $display6-size;
+} 
+.share,.icon-download{
+    right: 0;
+    height: 32px;
+    width: 32px;
+    line-height: 0;
+    z-index: 5;
+}
+.circle-hover-light:hover {
+    box-shadow:  0 0 0 4px   #72BBFA;
+    svg path{ 
+        fill:$primary;
+    }
+    
+    &.share,&.download{
+        background: #fff !important;
+        svg ellipse, svg circle{
+            fill:$primary;
+        }
+        svg path{ 
+            fill:transparent;
+            stroke: $primary;
+        }
+    }
+}
+@media screen and (max-width:576px){
+    html{
+        font-size: 12px
+    }
+  }

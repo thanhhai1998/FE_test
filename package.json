@@ -3,11 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fullpage/react-fullpage": "^0.1.19",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.3",
+    "bootstrap": "^4.6.0",
+    "flickity": "^2.2.2",
+    "node-sass": "^5.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-flickity-component": "^3.6.1",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.0"
   },

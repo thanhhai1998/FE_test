@@ -1,0 +1,24 @@
+@import "Variables.scss";
+@import '../../../node_modules/bootstrap/scss/functions';
+@import '../../../node_modules/bootstrap/scss/variables';
+@import '../../../node_modules/bootstrap/scss/mixins';
+@import '../../../node_modules/bootstrap/scss/root';
+@import '../../../node_modules/bootstrap/scss/reboot';
+@import '../../../node_modules/bootstrap/scss/type';
+@import '../../../node_modules/bootstrap/scss/images';
+@import '../../../node_modules/bootstrap/scss/grid';
+@import '../../../node_modules/bootstrap/scss/utilities';
+@import '../../../node_modules/bootstrap/scss/buttons';
+@import "../../../node_modules/bootstrap/scss/forms"; 
+
+@import './Components/Header.scss';
+@import './Components/Download.scss';
+@import './Components/Contact.scss';
+@import './Components/Banner.scss';
+@import './Components/Community.scss';
+@import './Components/Event.scss';
+@import './Components/Footer.scss';
+@import './Components/Exclusive.scss';
+@import './plugins/flickity.scss';
+@import './plugins/fullpage.scss';
+@import './Common.scss';

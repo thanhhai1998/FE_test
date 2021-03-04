@@ -1,0 +1,12 @@
+.section .fp-tableCell{
+    display: flex;
+    align-items: flex-end;
+    section,footer{
+        width: 100%;
+    }
+}
+@media screen and (max-width:576px){
+    .section, .section .fp-tableCell{
+      height: unset !important;
+    }
+}

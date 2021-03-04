@@ -1,0 +1,181 @@
+.event{ 
+    .flickity-viewport 
+{
+        overflow: unset;
+        margin: 5rem 0;
+        .carousel-cell{
+            width: 300px;
+            height: 500px;
+            max-height: 50vh;
+            max-width: 80vw;
+            transition: all 0.3s ;
+            -webkit-transition: all 0.3s ;
+            -moz-transition: all 0.3s ;
+            -ms-transition: all 0.3s ;
+            -o-transition: all 0.3s ;
+                        .carousel-cell-bg-gradient  
+{
+                bottom: 0;
+                top: 60%;
+                left: 0;
+                right: 0;
+                background-image: linear-gradient(transparent,#333);
+                z-index: 1;
+            }
+            .carousel-cell-content{
+               p,button{
+                   display: none;
+               }
+            }
+            .share{
+                right: .5rem;
+                opacity: 0;
+             }
+             .btn:hover{
+                  
+        background: $primary !important;
+        border-color: $primary !important;
+             }
+            &:hover{
+                transform: scale(1.1)        ;
+                -webkit-transform: scale(1.1)        ;
+                -moz-transform: scale(1.1)        ;
+                -ms-transform: scale(1.1)        ;
+                -o-transform: scale(1.1)        ;
+                                 .img-post 
+{
+                    display: none;
+                }
+                .share{ 
+                   opacity: 1;
+                }
+                .carousel-cell-content{
+                    
+                    z-index: 3;
+                    bottom: 0;
+                    top: 0;
+                    p,button{
+                        display: block;
+                    }
+                    span:after{
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        height: 1px;
+                        width: 3rem;
+                        background: #fff;
+                    }
+                }
+}
+
+        }
+    }
+  ul{
+      li{
+          height: 45px;
+          width: 45px;
+          line-height: 40px;
+      }
+  }
+}
+
+@media screen and (min-width:576px){
+    .event{
+        height: calc(100vh - 71px); 
+    }
+} 
+.rounded-circle{
+    #container {
+        position: absolute; 
+        width: 45px;
+        height: 45px;
+       top: -2.25px;
+       left: -2.25px; 
+      }
+      
+      #halfclip {
+          width: 50%;
+          height: 100%;
+          right: 0px;
+          position: absolute;
+          overflow: hidden;
+          transform-origin: left center;
+      }
+      
+    
+      
+      .halfcircle {
+        box-sizing: border-box;
+        height: 100%;
+        right: 0px;
+        position: absolute;
+        border: solid 2.25px transparent;
+         border-top-color: $primary;
+         border-left-color: $primary;
+         border-radius: 50%;
+      }
+      
+      #clipped {
+          width: 200%;
+          transform: rotate(-45deg);
+      }
+ 
+ &.active{
+     border:2.25px solid #fff;
+    #halfclip {
+        animation: cliprotate 3s 1;
+        transform: rotate(180deg);
+        -webkit-animation: cliprotate 3s 1;
+    } 
+    
+    @keyframes cliprotate {
+      0% {transform: rotate(0deg);}
+      50% {transform: rotate(0deg);}
+      50.01% {transform: rotate(180deg);}
+      100% {transform: rotate(180deg);}
+    }
+      #clipped {
+          transform: rotate(135deg);
+          animation: rotate 1.5s linear 2;
+          -webkit-animation: rotate 1.5s linear 2;
+    }
+      
+      
+      @keyframes rotate {
+        0% {transform: rotate(-45deg);}
+        100% {transform: rotate(135deg);}
+      }
+          
+      #fixed {
+        opacity: 1;
+        animation: showfixed 3s 1;
+        -webkit-animation: showfixed 3s 1;
+    }
+ }
+    
+    
+    
+    @keyframes showfixed {
+      0% {opacity: 0;}
+      49.99% {opacity: 0;}
+      50% {opacity: 1;}
+     100% {opacity: 1;}
+    }
+      #fixed {
+        width: 100%;
+          transform: rotate(135deg);  
+          opacity: 0;
+      }
+  
+}
+ 
+
+
+
+
+
+
+
+
+

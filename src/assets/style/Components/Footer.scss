@@ -1,0 +1,44 @@
+
+.footer{
+    .footer-content{
+        flex: 1 1 auto;
+        .form-group{ 
+            width: 150px;
+            select{ 
+                height: 50px;
+               padding-left: 40px;
+               -moz-appearance:none; 
+               -webkit-appearance:none;  
+               appearance:none;
+            }
+            .language-img{
+                top:  13px;
+                left: 10px;
+            }
+            .arrow{
+                right: 10px;
+                top: 20px
+}
+        }
+    }
+    .copyright{
+        flex: 0 1 80px;}
+        .icon-social{
+            height: 45px;
+            width: 45px;
+            line-height: 40px; 
+            &:hover{}
+            &.facebook svg{
+                bottom: 0;
+                right: 7px;
+            }
+        }
+}
+@media screen and (min-width:576px){
+    .footer{
+        height: calc(100vh - 71px); 
+        .logo{
+            margin-left: -29px;
+        }
+    }
+}
