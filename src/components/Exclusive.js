@@ -59,7 +59,7 @@ class Exclusive extends Component {
             return <div key={index} className="carousel-cell  p-2 mx-3 bg-info rounded-lg border">
                 <div className="position-relative h-100 w-100 d-flex align-items-center justify-content-center">
 
-                    <a href="#" className="position-absolute  circle-hover-light download  icon-download rounded-circle bg-light p-2">
+                    <a href={x.img} download className="position-absolute  circle-hover-light download  icon-download rounded-circle bg-light p-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 18.462 16.837">
                             <g id="Side_Buttons" data-name="Side Buttons" transform="translate(-15.425 -13.498)">
                                 <g id="Group_123" data-name="Group 123" transform="translate(4.197 4.016)">
