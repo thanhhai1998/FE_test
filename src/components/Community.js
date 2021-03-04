@@ -44,7 +44,7 @@ class Community extends Component {
         super();
         this.state = {
             totalSlide: 0,
-            indexCurrentSlide: 0
+            indexCurrentSlide: 0, showMore: false
         }
     }
     componentDidMount = () => {
@@ -78,18 +78,18 @@ class Community extends Component {
             return <div key={index} className="carousel-cell p-2 mx-md-3 bg-info rounded-lg border">
                 <div className="position-relative">
                     <a className="position-absolute facebook" href="#">
-                        <svg id="facebook" className="position-absolute" xmlns="http://www.w3.org/2000/svg" width="32.583" height="32.583" viewBox="0 0 32.583 32.583">
+                        <svg id="facebook" xmlns="http://www.w3.org/2000/svg" width="32.583" height="32.583" viewBox="0 0 32.583 32.583">
                             <path id="Path_394" data-name="Path 394" d="M30.785,0H1.8A1.8,1.8,0,0,0,0,1.8V30.786a1.8,1.8,0,0,0,1.8,1.8H30.785a1.8,1.8,0,0,0,1.8-1.8h0V1.8a1.8,1.8,0,0,0-1.8-1.8Zm0,0" transform="translate(0 0)" fill="#4267b2" />
                             <path id="Path_395" data-name="Path 395" d="M216.323,104.987v-12.6h4.248l.636-4.932h-4.884V84.313c0-1.425.4-2.4,2.438-2.4h2.589v-4.4a34.806,34.806,0,0,0-3.794-.194c-3.755,0-6.324,2.291-6.324,6.5v3.63H207v4.932h4.232v12.6Zm0,0" transform="translate(-193.827 -72.403)" fill="#fff" />
                         </svg>
                     </a>
                     <a href="#" className="position-absolute circle-hover-light share rounded-circle bg-light p-2">
-                    <svg id="Group_121" data-name="Group 121" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14.362 14.875">
-                                        <circle id="Ellipse_241" data-name="Ellipse 241" cx="2.565" cy="2.565" r="2.565" transform="translate(9.233 0)" fill="#141414" />
-                                        <ellipse id="Ellipse_242" data-name="Ellipse 242" cx="2.565" cy="2.821" rx="2.565" ry="2.821" transform="translate(9.233 9.233)" fill="#141414" />
-                                        <ellipse id="Ellipse_243" data-name="Ellipse 243" cx="2.565" cy="2.821" rx="2.565" ry="2.821" transform="translate(0 5.129)" fill="#141414" />
-                                        <path id="Path_206" data-name="Path 206" d="M1020.684,818.6l-7.779,4.4,7.779,4.4" transform="translate(-1009.958 -815.268)" fill="none" stroke="#141414" stroke-linejoin="round" stroke-width="1" />
-                                    </svg>
+                        <svg id="Group_121" data-name="Group 121" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14.362 14.875">
+                            <circle id="Ellipse_241" data-name="Ellipse 241" cx="2.565" cy="2.565" r="2.565" transform="translate(9.233 0)" fill="#141414" />
+                            <ellipse id="Ellipse_242" data-name="Ellipse 242" cx="2.565" cy="2.821" rx="2.565" ry="2.821" transform="translate(9.233 9.233)" fill="#141414" />
+                            <ellipse id="Ellipse_243" data-name="Ellipse 243" cx="2.565" cy="2.821" rx="2.565" ry="2.821" transform="translate(0 5.129)" fill="#141414" />
+                            <path id="Path_206" data-name="Path 206" d="M1020.684,818.6l-7.779,4.4,7.779,4.4" transform="translate(-1009.958 -815.268)" fill="none" stroke="#141414" stroke-linejoin="round" stroke-width="1" />
+                        </svg>
 
                     </a>
                     <div className="img-post rounded-circle mx-auto mb-2 py-4  " >
@@ -101,6 +101,38 @@ class Community extends Component {
                     </div>
                 </div>
             </div>
+        })
+    }
+    renderAllPostMobile = () => {
+        return listt.map((x, index) => {
+            return <>
+            {index < 3 ? <div key={index} className="carousel-cell p-4 p-md-2 mx-md-3 bg-info rounded-lg border">
+                <div className="position-relative">
+                    <a className="position-absolute facebook" href="#">
+                        <svg id="facebook" xmlns="http://www.w3.org/2000/svg" width="32.583" height="32.583" viewBox="0 0 32.583 32.583">
+                            <path id="Path_394" data-name="Path 394" d="M30.785,0H1.8A1.8,1.8,0,0,0,0,1.8V30.786a1.8,1.8,0,0,0,1.8,1.8H30.785a1.8,1.8,0,0,0,1.8-1.8h0V1.8a1.8,1.8,0,0,0-1.8-1.8Zm0,0" transform="translate(0 0)" fill="#4267b2" />
+                            <path id="Path_395" data-name="Path 395" d="M216.323,104.987v-12.6h4.248l.636-4.932h-4.884V84.313c0-1.425.4-2.4,2.438-2.4h2.589v-4.4a34.806,34.806,0,0,0-3.794-.194c-3.755,0-6.324,2.291-6.324,6.5v3.63H207v4.932h4.232v12.6Zm0,0" transform="translate(-193.827 -72.403)" fill="#fff" />
+                        </svg>
+                    </a>
+                    <a href="#" className="position-absolute circle-hover-light share rounded-circle bg-light p-2">
+                        <svg id="Group_121" data-name="Group 121" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14.362 14.875">
+                            <circle id="Ellipse_241" data-name="Ellipse 241" cx="2.565" cy="2.565" r="2.565" transform="translate(9.233 0)" fill="#141414" />
+                            <ellipse id="Ellipse_242" data-name="Ellipse 242" cx="2.565" cy="2.821" rx="2.565" ry="2.821" transform="translate(9.233 9.233)" fill="#141414" />
+                            <ellipse id="Ellipse_243" data-name="Ellipse 243" cx="2.565" cy="2.821" rx="2.565" ry="2.821" transform="translate(0 5.129)" fill="#141414" />
+                            <path id="Path_206" data-name="Path 206" d="M1020.684,818.6l-7.779,4.4,7.779,4.4" transform="translate(-1009.958 -815.268)" fill="none" stroke="#141414" stroke-linejoin="round" stroke-width="1" />
+                        </svg>
+
+                    </a>
+                    <div className="img-post rounded-circle mx-auto mb-2 py-5 py-md-4  " >
+                        <img src={x.img} width="200" className="" />
+                    </div>
+                    <div className="text-left">
+                        <span className="m-0 title-live-update text-primary display-6">{x.title}
+                        </span>
+                    </div>
+                </div>
+            </div>:<></>}
+            </>
         })
     }
     next = () => {
@@ -188,7 +220,7 @@ class Community extends Component {
                         <form className="form-search d-block d-md-none col-12 p-0  mt-2">
                             <div className="form-group m-0 position-relative">
                                 <input placeholder="search" name="search" id="search" className="form-control pr-4" />
-                                <svg id="Search"  xmlns="http://www.w3.org/2000/svg" width="16.9" height="16.9" viewBox="0 0 16.9 16.9">
+                                <svg id="Search" xmlns="http://www.w3.org/2000/svg" width="16.9" height="16.9" viewBox="0 0 16.9 16.9">
                                     <path id="Path_99" data-name="Path 99" d="M16.9,15.412,13.392,11.9A7.277,7.277,0,0,0,14.881,7.44,7.394,7.394,0,0,0,7.44,0,7.394,7.394,0,0,0,0,7.44a7.394,7.394,0,0,0,7.44,7.44A7.277,7.277,0,0,0,11.9,13.392L15.412,16.9ZM2.126,7.44A5.263,5.263,0,0,1,7.44,2.126,5.263,5.263,0,0,1,12.755,7.44,5.263,5.263,0,0,1,7.44,12.755,5.263,5.263,0,0,1,2.126,7.44Z" fill="#2699fb" />
                                 </svg>
                             </div>
@@ -207,7 +239,16 @@ class Community extends Component {
                     </Flickity>
                     {this.renderCustomNavigation()}
                 </div>
+                <div className="carousel-all-post mt-4 d-block d-md-none">
+                    <div className="carousel position-relative">
+                        {this.renderAllPostMobile()}
+                        <div className="view-more w-100  fixed-bottom position-absolute">
+                            <button type="button" className="btn bg-light color-primary text-primary border px-5  display-5">More</button>
+                        </div>
+                    </div>
 
+
+                </div>
             </section>
         );
     }

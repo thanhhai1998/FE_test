@@ -31,11 +31,18 @@
         }
     }
     .carousel-all-post{
-        .carousel-cell{
-            max-width: 270px; 
-            max-height: 40vh;
+        .carousel-cell{ 
+            margin: 0 15px 15px 15px;  
             .facebook{
                 left: 0;
+            }
+        }
+        .view-more{
+            background: linear-gradient(transparent, #fff,#fff );
+            padding: 5rem 0;
+            .btn:hover{
+                color: #fff !important;
+                background: $primary !important;
             }
         }
     }
@@ -44,6 +51,7 @@
         width: 40px;
         line-height: 35px; 
         &.facebook svg{
+            position: absolute;
             bottom: 0; 
             right: 7px;
         }
@@ -60,5 +68,12 @@
 @media screen and (min-width:576px){
     .community{
         height: calc(100vh - 71px); 
+        .carousel-all-post{
+            .carousel-cell{
+                max-width: 270px; 
+                max-height: 40vh;
+             
+            }
+        }
     }
 }
